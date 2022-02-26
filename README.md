@@ -1,17 +1,17 @@
 # 😎 Introdução
 
 - O que é?
-  `O websocket é um protocolo de comunicação entre` **cliente e servidor**
+  1. O websocket é um protocolo de comunicação entre **cliente e servidor**
 
 
 - Para o que você precisa de um websocket?
-  `Muito utilizado para fazer chats, o websocket, é normalmente usado quando você precisa que o `**_SERVIDOR envie informações_** `para o cliente.`
+  1. Muito utilizado para fazer chats, o websocket, é normalmente usado quando você precisa que o **_SERVIDOR envie informações_** para o cliente.
 
 
 - No que se difere do protocolo HTTP?
-   1. ` No HTTP, o cliente é sempre o que abre a conexão e faz a requisição... depois o servidor responde e a conexão é encerrada (se ele precisar de mais informações, terá de abrir uma nova conexão). `
-   
-   1. `No websocket, o cliente pede para abrir uma conexão constante com o servidor. Se a conexão for aceita: a conexão fica aberta até algumas das partes dizer pra fechar. Enquanto essa conexão estiver aberta tanto o cliente quanto o servidor podem mandar mensagens um para o outro`
+   1. No HTTP, o cliente é sempre o que abre a conexão e faz a requisição... depois o servidor responde e a conexão é encerrada (se ele precisar de mais informações, terá de abrir uma nova conexão).
+
+   1. No websocket, o cliente pede para abrir uma conexão constante com o servidor. Se a conexão for aceita: a conexão fica aberta até algumas das partes dizer pra fechar. Enquanto essa conexão estiver aberta tanto o cliente quanto o servidor podem mandar mensagens um para o outro
 
 ---
 
