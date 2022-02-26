@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script>
+    // Abre uma conexão com o websocket
+    const conexao = new WebSocket("ws://localhost:8080/");
+
+    // Quando receber qualquer mensagem do websocket...
+    conexao.onmessage = ((e) => {
+        // Gera um novo paragrafo (tag p)
+        const p = document.createElement("p");
+
+        // define o texto do paragrafo
+        p.innerText = e.data
+
+        // Adiciona esse paragrafo na div de id 'divMensagensRecebidas'
+        document.getElementById("divMensagensRecebidas").appendChild(p);
+    })
+
+
+    function btnClickEnviarMensagem() {
+        // Define o objeto que será enviado para o websocket
+        const objASerEnviadoParaOWebsocket = {
+            acao: "PrintarNoConsoleERetornar",
+            mensagem: document.getElementById("mesagemParaSerEnviada").value
+        }
+
+        // Converte o objeto para um json
+        const jsonASerEnviado = JSON.stringify(objASerEnviadoParaOWebsocket);
+
+        // Envia para o websocket
+        conexao.send(jsonASerEnviado)
+    }
+</script>
+
+<body>
+    <!-- Input para escrever a mensagem -->
+    <input id="mesagemParaSerEnviada" />
+
+    <!-- Botão para enviar a mensagem -->
+    <button onclick="btnClickEnviarMensagem()">Enviar mensagem</button>
+
+    <!-- Mensagens recebidas -->
+    <h1>Mensagem Recebidas</h1>
+    <div id="divMensagensRecebidas">
+    </div>
+</body>
+
+</html>
